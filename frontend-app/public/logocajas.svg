@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+ <defs>
+    <!-- Filtro de sombra suave aplicado a la silueta del engranaje -->
+    <filter id="sombra-engranaje" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <mask id="restar-rectangulo">
+        <rect width="500" height="500" fill="#ffffff" />
+        <rect x="140" y="220" width="120" height="150" fill="#000000" />
+    </mask>
+    <path id="ruta-texto-circular" d="M 100,200 A 100,100 0 0,1 300,200" fill="none" />
+ </defs>
+ 
+ <!-- Se añadió el atributo filter en esta línea para afectar únicamente al engranaje -->
+ <path filter="url(#sombra-engranaje)" d="M 180.44569186997114 76.53895742560778 L 181.94297842024292 41.02219031679866 L 218.05702157975708 41.02219031679866 L 219.55430813002886 76.53895742560778 L 256.7488124674434 88.62418447645403 L 278.83637464772664 60.77059925287588 L 308.0532492993639 81.99790122269218 L 288.3883476483185 111.61165235168157 L 311.37581552354595 143.25118753255666 L 345.6169553095993 133.69990704107454 L 356.7768083814795 168.04640311769487 L 323.4610425743922 180.44569186997114 L 323.4610425743922 219.55430813002886 L 356.7768083814795 231.95359688230513 L 345.6169553095993 266.30009295892546 L 311.37581552354595 256.7488124674434 L 288.3883476483185 288.3883476483184 L 308.0532492993639 318.0020987773078 L 278.83637464772664 339.22940074712415 L 256.7488124674434 311.37581552354595 L 219.55430813002886 323.4610425743922 L 218.05702157975708 358.9778096832014 L 181.94297842024292 358.9778096832014 L 180.44569186997114 323.4610425743922 L 143.25118753255666 311.37581552354595 L 121.16362535227337 339.22940074712415 L 91.94675070063609 318.0020987773078 L 111.61165235168157 288.3883476483185 L 88.62418447645403 256.7488124674434 L 54.38304469040071 266.30009295892546 L 43.2231916185205 231.95359688230513 L 76.53895742560779 219.55430813002886 L 76.53895742560778 180.44569186997117 L 43.2231916185205 168.04640311769492 L 54.38304469040071 133.69990704107454 L 88.62418447645402 143.25118753255666 L 111.61165235168154 111.61165235168157 L 91.94675070063607 81.9979012226922 L 121.16362535227333 60.77059925287591 L 143.25118753255663 88.62418447645403 Z M 200 120 A 80 80 0 1 0 200 280 A 80 80 0 1 0 200 120 Z" 
+    fill="#ffffff" 
+    stroke="#901116" 
+    stroke-width="4" 
+    fill-rule="evenodd"
+    mask="url(#restar-rectangulo)" />
+
+    <!-- Círculo intermedio rojo (se mantiene limpio de sombra) -->
+    <circle cx="200" cy="200" r="88" 
+    fill="#C81D25" 
+    stroke="#901116" 
+    stroke-width="4" /> 
+
+    <!-- Círculo amarillo interno -->
+    <circle cx="200" cy="200" r="80" 
+    fill="#faf9e1" 
+    stroke="#403F9C" 
+    stroke-width="4" /> 
+
+    <!-- Texto inferior (IESTP) -->
+    <text x="200" y="333" font-family="IMPACT, sans-serif" font-size="50" font-weight="bold" fill="#424040" text-anchor="middle">IESTP</text>
+
+    <!-- TEXTO CIRCULAR BLANCO AJUSTADO A RADIO 120 -->
+    <text font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#240b75" text-anchor="middle">
+        <textPath href="#ruta-texto-circular" startOffset="50%">ANDRÉS AVELINO CÁCERES DORREGARAY</textPath>
+    </text>
+</svg>
